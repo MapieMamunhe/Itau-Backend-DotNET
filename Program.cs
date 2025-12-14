@@ -41,6 +41,7 @@ try
                        0.075, 0.1, 0.25, 0.5, 0.75, 1, 2.5, 5, 7.5, 10 }
             });
     });
+    builder.WebHost.UseUrls("http://+:7045");
 
     // MEtricas
     var tracingOtlpEndpoint = builder.Configuration["OTLP_ENDPOINT_URL"];
