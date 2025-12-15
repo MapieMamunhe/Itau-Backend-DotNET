@@ -1,4 +1,5 @@
-﻿using Itau_Backend.Models;
+﻿using Itau_Backend.Exceptions;
+using Itau_Backend.Models;
 
 namespace Itau_Backend.Repository
 {
@@ -21,6 +22,10 @@ namespace Itau_Backend.Repository
 
         public void Nova(Transacao transacao)
         {
+            if (transacao.DataHora > DateTime.UtcNow)
+            {
+                throw new DataTransacaoNoFuturoException();
+            }
             transacoes.Add(transacao);
         }
     }

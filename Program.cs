@@ -1,4 +1,6 @@
-﻿using Microsoft.OpenApi;
+﻿using Itau_Backend.Models;
+using Itau_Backend.Repository;
+using Microsoft.OpenApi;
 using OpenTelemetry.Metrics;
 using OpenTelemetry.Resources;
 using OpenTelemetry.Trace;
@@ -91,6 +93,7 @@ try
     });
 
     // Add services to the container.
+    builder.Services.AddSingleton<ITransacaoRepository, TransacaoRepository>();
 
     builder.Services.AddControllers();
     // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi

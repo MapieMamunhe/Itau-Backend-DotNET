@@ -1,3 +1,4 @@
 <Solution>
+  <Project Path="../Itau Testes/Itau Testes.csproj" Id="30e6ca42-ca69-45a4-83c2-e4bf1617b7c5" />
   <Project Path="Itau Backend.csproj" />
 </Solution>
