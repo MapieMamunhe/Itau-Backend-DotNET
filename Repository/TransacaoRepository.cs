@@ -26,6 +26,10 @@ namespace Itau_Backend.Repository
             {
                 throw new DataTransacaoNoFuturoException();
             }
+            if(transacao.Valor < 0)
+            {
+                throw new ValorDaTransacaoMenorQueZero();
+            }
             transacoes.Add(transacao);
         }
     }
